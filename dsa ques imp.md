@@ -162,3 +162,253 @@
 //   }
 //   System.out.println();
 //  }
+
+
+SOURCE(PEPCODE)
+ **********************inverse of number*****************************
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+int inv =0;
+int op=1;
+while(n!=0){
+    int od=n%10;
+    int id =op;
+    int ip = od;
+    inv = inv+id*(int)Math.pow(10, ip-1);
+    n=n/10;
+    op++;
+
+
+}
+System.out.println(inv);
+    }
+}
+<!-- Explaination y dry running this code -->
+
+Dry Run (Input: 31245)
+Initial:
+n = 31245
+
+inv = 0
+
+op = 1
+
+First Iteration:
+od = 31245 % 10 = 5 (Extract last digit: 5)
+
+id = 1 (Position is 1)
+
+ip = 5 (The digit itself: 5)
+
+inv = inv + 1 * Math.pow(10, 5 - 1) = 0 + 1 * Math.pow(10, 4) = 0 + 10000 = 10000
+
+n = 31245 / 10 = 3124
+
+op = 2
+
+Second Iteration:
+od = 3124 % 10 = 4
+
+id = 2 (Position is 2)
+
+ip = 4
+
+inv = 10000 + 2 * Math.pow(10, 4 - 1) = 10000 + 2 * Math.pow(10, 3) = 10000 + 2000 = 12000
+
+n = 3124 / 10 = 312
+
+op = 3
+
+Third Iteration:
+od = 312 % 10 = 2
+
+id = 3 (Position is 3)
+
+ip = 2
+
+inv = 12000 + 3 * Math.pow(10, 2 - 1) = 12000 + 3 * Math.pow(10, 1) = 12000 + 30 = 12030
+
+n = 312 / 10 = 31
+
+op = 4
+
+Fourth Iteration:
+od = 31 % 10 = 1
+
+id = 4 (Position is 4)
+
+ip = 1
+
+inv = 12030 + 4 * Math.pow(10, 1 - 1) = 12030 + 4 * Math.pow(10, 0) = 12030 + 4 = 12034
+
+n = 31 / 10 = 3
+
+op = 5
+
+Fifth Iteration:
+od = 3 % 10 = 3
+
+id = 5 (Position is 5)
+
+ip = 3
+
+inv = 12034 + 5 * Math.pow(10, 3 - 1) = 12034 + 5 * Math.pow(10, 2) = 12034 + 500 = 12534
+
+n = 3 / 10 = 0
+
+op = 6
+
+Exit Condition:
+Since n = 0, the loop exits.
+
+Final Output:
+inv = 12534
+  <!-- *Conclusion is that i have to inverse the input. so the function inv = inv+id*(int)Math.pow(10, ip-1); used for input not for the output* -->
+
+
+  //***************************ROTATE A NUMBER */ 
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+int k = scn.nextInt();
+
+int temp =n;
+int counter = 0;
+while(n!=0){
+    temp = temp /10;
+    counter++;
+}
+k = k % counter;
+if(k<0){
+    k = k+ counter;
+}
+int div = 1;
+int mult =1;
+for(int i = 1; i <= counter;i++ ){
+    if(i<=k){
+        div = div*10;
+    }else{
+        mult = mult*10;
+    }
+}  
+int q = n / div;
+int r = n%div;
+int s = r*mult +q;
+System.out.println(s);
+
+<!-- Explaination y dry running this code -->
+
+
+
+Key Observations:
+If k is larger than the number of digits, rotating by k is the same as rotating by k % (number of digits).
+
+Example: For n = 87694 (5 digits), rotating by 9 is the same as rotating by 9 % 5 = 4.
+
+If k is negative, it means left rotation. We can convert it to an equivalent positive right rotation.
+
+Example: Rotating left by 2 is the same as rotating right by 5 - 2 = 3 (for a 5-digit number).
+
+Step-by-Step Explanation:
+1. Count the number of digits (counter):
+n = 87694 has 5 digits.
+
+2. Adjust k to a valid positive right rotation:
+If k = 9:
+
+k = 9 % 5 = 4 (since rotating by 5 is a full rotation and brings the number back to itself).
+
+If k = -8:
+
+k = -8 % 5 = -3 (in Java, % gives remainder, not modulus).
+
+Since k is negative, we add 5 to make it positive: k = -3 + 5 = 2.
+
+3. Calculate div and mult:
+div is 10^k (splits the number into two parts).
+
+mult is 10^(counter - k) (used to combine the parts after rotation).
+
+For k = 4:
+
+div = 10^4 = 10000.
+
+mult = 10^(5-4) = 10.
+
+For k = 2:
+
+div = 10^2 = 100.
+
+mult = 10^(5-2) = 1000.
+
+4. Split the number into two parts:
+q = n / div (first part).
+
+r = n % div (second part).
+
+For k = 4:
+
+q = 87694 / 10000 = 8.
+
+r = 87694 % 10000 = 7694.
+
+For k = 2:
+
+q = 87694 / 100 = 876.
+
+r = 87694 % 100 = 94.
+
+5. Combine the parts to form the rotated number:
+s = r * mult + q.
+
+For k = 4:
+
+s = 7694 * 10 + 8 = 76940 + 8 = 76948.
+
+For k = 2:
+
+s = 94 * 1000 + 876 = 94000 + 876 = 94876.
+
+Final Outputs:
+For k = 9 (equivalent to k = 4): 87694 rotated right by 4 is 76948.
+
+For k = -8 (equivalent to k = 2): 87694 rotated right by 2 (or left by 3) is 94876.
+
+
+
+
+
+// ************************GCD AND LCM **********************
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+int t = scn.nextInt();
+
+int div = n;
+int ded = t;
+
+while( t%n != 0 ){
+    int rem = t % n;
+    t = n;
+   n  = rem;
+     
+}
+int gcd = n;
+int lcm = ( div * ded)/ gcd;
+ 
+System.out.println("GCD of given numbers is : " + gcd);
+System.out.println("Lcm of the given numbers is : "+ lcm);
+  
+  
+
+  // **************************PRIME FACTORIZATION******************
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+     for(int i = 2; i * i<= n; i++){
+        while(n% i ==0){
+            n = n /i;
+            System.out.println(i);
+        }
+if( n!= 1){
+    System.out.println(n);
+}
+     }
+
