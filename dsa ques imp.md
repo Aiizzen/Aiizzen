@@ -412,3 +412,108 @@ if( n!= 1){
 }
      }
 
+     //**************************Triangle rotated by 180 degree**********
+ Scanner scn = new Scanner (System.in);
+        int n  = scn.nextInt();
+        int sp = n-1;
+        int st =1;
+    for(int i = 1 ; i <=n;i++){
+        for(int j = 1; j<= sp;j++){
+            System.out.print(" " ); 
+        } 
+        for(int j = 1; j<=st; j++){
+            System.out.print("*");
+        }
+        sp--;
+        st++;
+        System.out.println();
+
+
+//************************DIAMOND SHAPE ******************
+  Scanner scn = new Scanner (System.in);
+        int n = scn.nextInt();
+
+        int sp = n/2;
+        int st = 1;
+        for(int i = 1; i <=n;i++){
+            for(int j =1;j<= sp;j++){
+                System.out.print("\t");
+            }
+            for(int j = 1;j<=st;j++){
+                System.out.print("*\t");
+            }
+            if(i<=n/2){
+                sp--;
+                st+=2;
+            }else{
+                sp++;
+                st-=2;
+            }
+            System.out.println();
+        }
+            }
+// ****************HOLLOW DIAMOND PATTERN***********
+
+        Scanner scn = new Scanner (System.in);
+        int n = scn.nextInt();
+
+        int st= n/2+1;
+        int sp = 1;
+        for(int i =1;i<=n;i++){
+           for(int j = 1; j<= st;j++){
+            System.out.print("*\t");
+           }
+
+            for(int j =1;j<= sp;j++){
+                System.out.print("\t");
+            }
+            for(int j = 1;j<=st;j++){
+                System.out.print("*\t");
+            }
+       
+            if(i<=n/2){
+                sp+=2;
+                st--;
+            }else{
+                sp-=2;
+                st++;
+            }
+            System.out.println();
+        }
+    
+//**************DIAMOND PATTERN CODE**********
+                         *
+                      *     *
+                   *           *
+                      *     *
+                         *
+
+
+      Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+int os = n/2;
+int is=-1;
+for(int i = 1 ; i<=n; i++){
+    for(int j = 1; j<= os;j++){
+        System.out.print("\t");
+    }
+    System.out.print("*\t");
+
+    for(int j =1 ; j<=is;j++){
+        System.out.print("\t");
+    }
+    if(i> 1 && i<n){
+        System.out.print("*\t");
+    }
+    if(i<=n/2){
+        os--;
+        is+=2;
+    }else{
+        os++;
+        is-=2;
+    }
+    System.out.println();
+}                      
+                       
+
+
