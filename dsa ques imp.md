@@ -514,6 +514,67 @@ for(int i = 1 ; i<=n; i++){
     }
     System.out.println();
 }                      
-                       
+//**************PASCAL TRIANGLE***********
+Scanner scn = new Scanner (System.in);
+int n = scn.nextInt();
+for(int i = 0;i<=n;i++){
+    int icj = 1;
+    for(int j = 0;j<=i;j++){
+        System.out.print(icj+"\t");
+        int icjp1 = icj*(i-j)/(j+1);
+        icj =icjp1;
+    }
+    System.out.println();
+}
+
+//**************Table*************
+Scanner scn = new Scanner (System.in);
+int n = scn.nextInt();
+
+for(int i = 1 ; i<=10;i++){
+    int k = n*i;
+    System.out.print(n +" * "+ i+ " = "+ k);
+  System.out.println();
+}
+
+//********************pattern*******************
+               1
+            2  3  2
+        3   4  5  4  3
+            2  3  2
+               1
+  Scanner scn = new Scanner (System.in);
+int n = scn.nextInt();
+
+int sp = n/2;
+int st = 1;
+int val = 1;    
+for(int i = 1; i <=n;i++){
+    for(int j =1;j<= sp;j++){
+       System.out.print("\t");
+    }
+    int cval = val;
+    for(int j = 1;j<=st;j++){
+          System.out.print(cval +"\t");
+        if(j<=st/2){
+            cval++;
+        }else{
+            cval--;
+        }   
+    }    
+    if(i<=n/2){
+        sp--;
+        st+=2;
+        val++;
+    }else{
+        sp++;
+        st-=2;
+        val--;
+    }
+    System.out.println();
+}
+    }
+    }
+
 
 
