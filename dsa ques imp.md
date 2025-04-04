@@ -576,5 +576,25 @@ for(int i = 1; i <=n;i++){
     }
     }
 
+    //******************PYTHAGAGOREAN TRIPLET**************
 
 
+Scanner scn = new Scanner (System.in);
+int a = scn.nextInt();
+ int  b= scn.nextInt();
+ int c = scn.nextInt();
+  int max = a;
+  if(b>= max){
+    max = b;
+    if(c>= max){
+        max=c;}
+if(max==a){
+ boolean flag = ((b*b + c*c)==(a*a));
+}   
+else if(max==b){
+    boolean flag = ((a*a + c*c)==(b*b));
+}   
+}
+else if(max == c){
+    boolean flag = (( c*c)==(a*a + b*b));
+}   
