@@ -598,3 +598,39 @@ else if(max==b){
 else if(max == c){
     boolean flag = (( c*c)==(a*a + b*b));
 }   
+
+//********************PATTERN**********************
+               1           1
+               1 2       2 1
+               1 2 3   3 2 1
+               1 2 3 4 3 2 1
+Scanner scn = new Scanner (System.in);
+int n = scn.nextInt();
+
+int st = 1;
+int sp = 2*n-3;
+
+ for(int i = 1;i<=n;i++){
+   int val = 1;
+    for(int j = 1;j<=st;j++){
+        System.out.print(val +"\t");
+       val++;
+    }
+    for(int j = 1; j<= sp; j++){
+        System.out.print("\t");
+    }
+  😉if(i==n){
+        st--;
+        val--;
+    }
+
+    for(int j = 1;j<=st;j++){
+        val--;
+  System.out.print(val +"\t");
+
+       }
+  
+    st++;
+    sp-=2;
+ System.out.println(); 
+    }
