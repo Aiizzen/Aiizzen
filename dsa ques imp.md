@@ -691,3 +691,119 @@ st-=2;
 }  
 System.out.println();  
 }
+
+//********************SWASTIK******************************
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+ for(int i = 1; i<= n;i++){
+  for(int j = 1; j<=n;j++){
+
+    if(i==1 ){
+
+      if(j==n  || j<=n/2+1){
+        System.out.print("*\t");
+      }else{
+        System.out.print("\t");
+      }
+
+    }else if(i<=n/2) {
+
+      if(j==n/2+1 || j==n){
+        System.out.print("*\t");
+      }else{
+        System.out.print("\t");
+      }
+
+        
+    }else if(i==n/2+1){
+
+  System.out.print("*\t");
+    }else if(i<n) {
+      if(j==1|| j==n/2+1){
+        System.out.print("*\t");
+      }else{
+        System.out.print("\t");
+      }    
+
+    }else{
+
+      if(j==1||j>=n/2+1){
+        System.out.print("*\t");
+      }else{
+      System.out.print("\t");}
+
+    }
+    
+  }
+  System.out.println();
+ }
+} 
+*******************'PRINT W*************************
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+
+for(int i = 1;i<=n;i++){
+  for(int j =1 ; j<= n;j++){
+    
+      if(j==1 || j==n){
+        System.out.print("*\t");
+      }else if ( i>n/2 && (i==j|| i+j ==n+1)){
+        System.out.print("*\t");
+      } else{
+        System.out.print("\t");
+      }
+          
+      }
+  
+  System.out.println();
+} 
+
+*******QUES - is number prime?***********
+
+
+Scanner scn = new Scanner(System.in);
+int t = scn.nextInt();
+int counter = 0;
+for(int i = 1;i<=n;i++){
+int n =scn.nextInt();
+for(div = 2; div*div <= n;div++){
+if(n%div==0){
+count++;
+break;
+}
+if(count == 0){
+System.out.println("prime")
+}
+else{
+System.out.println("not prime")
+}
+}
+
+*************QUES -PRINT ALL THE PRIME NUMBER TILL N****************
+Scanner scn = new Scanner(System.in);
+int low = scn.nextInt();
+int high = scn.nextInt();
+for(int i = low;i<=high;i++){
+int counter = 0;
+int n =scn.nextInt();
+for(div = 2; div*div <= n;div++){
+if(n%div==0){
+count++;
+break;
+}
+if(count == 0){
+System.out.println(i)
+}
+}
+************QUES - FIBONACCI NUMBERS*******************
+
+Scanner scn = new Scanner(System.in);
+int n= scn.nextInt();
+int a = 0;
+int b = 1;
+for(int i = 1; i<=n;i++){
+  System.out.println(a);
+  int c =  a+b;
+a = b;
+b =c;
+}
