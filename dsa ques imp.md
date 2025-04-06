@@ -2,7 +2,7 @@
     
     
     SOURCE(SHRADDHA KHAPRA)
-    // ***********************************Hollow rectangle **********************( Revision ques)
+   ***********************************Hollow rectangle( Revision ques)**********************
     // int n = 4;
     // int m = 5;
     // // outer loop
@@ -49,7 +49,7 @@
 //   System.out.println( );
 // }
 
-/***************PRINT A NUMBER PYRAMID */
+/***************PRINT A NUMBER PYRAMID****************
 // int n =5;
 // for(int i = 1;i<=n;i++){
 //   for(int j =1; j<n-i;j++){
@@ -62,7 +62,7 @@
 // }
 
 
-/*****************PRINT A PALINDROMIC NUMBER PYRAMID */
+/*****************PRINT A PALINDROMIC NUMBER PYRAMID*********
 // int n=5;
 // for(int i = 1;i<=n;i++){
 //   for(int j = 1;j<=n-i;j++){
@@ -113,7 +113,7 @@
 // }  
 
 
-/ ******************PRINT THE HOLLOW BUTTERFLY PATTERN(REV QUESTION)
+/ ******************PRINT THE HOLLOW BUTTERFLY PATTERN(REV QUESTION)**********
 
 //  int n = 5;
 //  for(int i = 1; i<=n;i++) {
@@ -266,7 +266,6 @@ inv = 12534
   <!-- *Conclusion is that i have to inverse the input. so the function inv = inv+id*(int)Math.pow(10, ip-1); used for input not for the output* -->
 
 
-  //***************************ROTATE A NUMBER */ 
 Scanner scn = new Scanner(System.in);
 int n = scn.nextInt();
 int k = scn.nextInt();
@@ -377,7 +376,7 @@ For k = -8 (equivalent to k = 2): 87694 rotated right by 2 (or left by 3) is 948
 
 
 
-// ************************GCD AND LCM **********************
+// ************************GCD AND LCM**********************
 Scanner scn = new Scanner(System.in);
 int n = scn.nextInt();
 int t = scn.nextInt();
@@ -411,8 +410,7 @@ if( n!= 1){
     System.out.println(n);
 }
      }
-
-     //**************************Triangle rotated by 180 degree**********
+**************************Triangle rotated by 180 degree**********
  Scanner scn = new Scanner (System.in);
         int n  = scn.nextInt();
         int sp = n-1;
@@ -429,7 +427,7 @@ if( n!= 1){
         System.out.println();
 
 
-//************************DIAMOND SHAPE ******************
+//************************DIAMOND SHAPE******************
   Scanner scn = new Scanner (System.in);
         int n = scn.nextInt();
 
@@ -576,7 +574,7 @@ for(int i = 1; i <=n;i++){
     }
     }
 
-    //******************PYTHAGAGOREAN TRIPLET**************
+  ******************PYTHAGAGOREAN TRIPLET**************
 
 
 Scanner scn = new Scanner (System.in);
@@ -635,7 +633,7 @@ int sp = 2*n-3;
  System.out.println(); 
     }
 
-    //*******************ARROW PATTERN****************
+  *******************ARROW PATTERN****************
      Scanner scn = new Scanner(System.in);
     int n = scn .nextInt();
     int sp = n/2;
