@@ -807,3 +807,39 @@ for(int i = 1; i<=n;i++){
 a = b;
 b =c;
 }
+**************QUES - COUNT DIGIT IN A NUMBER*****************
+Scanner scn = new Scanner(System.in);
+int n   = scn.nextInt();
+int count=0;
+while(n%10==0){ 
+   
+  count++;
+
+
+}System.out.println(count);
+*************QUES- DIGITS OF A NUMBER******************
+Scanner scn = new Scanner(System.in);
+int n   = scn.nextInt();
+ int count = 0;
+ int temp = n;
+ while(temp!=0){
+temp = temp/10;
+ count++;
+ }
+ int div = (int)Math.pow(10,count -1);
+ while(div!=0){
+  int q = n/div;
+System.out.println(q);
+n = n % div;
+div = div/10;
+ }
+ *********************REVERSE A NUMBER***********
+Scanner scn = new Scanner(System.in);
+int n = scn.nextInt();
+while(n != 0){
+  int r = n%10;
+  System.out.println(r);
+  n = n/10;
+}
+ 
+
