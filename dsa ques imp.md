@@ -82,7 +82,7 @@
 
 //   }
 
-// *******************PRINT BUTTERFLY PATTERN***********************
+// *******************PRINT BUTTERFLY PATTERN********************
 // int n = 4;
 // for(int i = 1; i<=n;i++){
 //   for(int j = 1; j<=i;j++){
@@ -113,7 +113,7 @@
 // }  
 
 
-/ ******************PRINT THE HOLLOW BUTTERFLY PATTERN(REV QUESTION)**********
+/ ******************PRINT THE HOLLOW BUTTERFLY PATTERN(REV QUESTION)******************
 
 //  int n = 5;
 //  for(int i = 1; i<=n;i++) {
@@ -165,7 +165,7 @@
 
 
 SOURCE(PEPCODE)
- **********************inverse of number*****************************
+ **********************inverse of number**********************
 Scanner scn = new Scanner(System.in);
 int n = scn.nextInt();
 int inv =0;
@@ -265,34 +265,35 @@ Final Output:
 inv = 12534
   <!-- *Conclusion is that i have to inverse the input. so the function inv = inv+id*(int)Math.pow(10, ip-1); used for input not for the output* -->
 
-
+******************ROTATE A NUMBER******************
 Scanner scn = new Scanner(System.in);
 int n = scn.nextInt();
 int k = scn.nextInt();
-
-int temp =n;
-int counter = 0;
-while(n!=0){
-    temp = temp /10;
-    counter++;
+int temp = n;
+int count = 0;
+while(temp!=0){
+  temp = temp/10;
+  count++;
 }
-k = k % counter;
+k = k%count;
 if(k<0){
-    k = k+ counter;
+  k = k+ count;
 }
 int div = 1;
 int mult =1;
-for(int i = 1; i <= counter;i++ ){
-    if(i<=k){
-        div = div*10;
-    }else{
-        mult = mult*10;
-    }
-}  
-int q = n / div;
-int r = n%div;
-int s = r*mult +q;
+for(int i = 1;i<=count;i++){
+if(i<=k){
+  div = div*10;
+}else{
+  mult = mult*10;
+}
+}
+int q = n/div;
+int r =n%div;
+int s = r*mult+q;
+
 System.out.println(s);
+
 
 <!-- Explaination y dry running this code -->
 
@@ -395,10 +396,9 @@ int lcm = ( div * ded)/ gcd;
  
 System.out.println("GCD of given numbers is : " + gcd);
 System.out.println("Lcm of the given numbers is : "+ lcm);
-  
-  
+    
 
-  // **************************PRIME FACTORIZATION******************
+  // **************************PRIME FACTORIZATION**************************
 Scanner scn = new Scanner(System.in);
 int n = scn.nextInt();
      for(int i = 2; i * i<= n; i++){
@@ -410,7 +410,7 @@ if( n!= 1){
     System.out.println(n);
 }
      }
-**************************Triangle rotated by 180 degree**********
+**************************Triangle rotated by 180 degree**************************
  Scanner scn = new Scanner (System.in);
         int n  = scn.nextInt();
         int sp = n-1;
@@ -574,7 +574,7 @@ for(int i = 1; i <=n;i++){
     }
     }
 
-  ******************PYTHAGAGOREAN TRIPLET**************
+  ******************PYTHAGOREAN TRIPLET**************
 
 
 Scanner scn = new Scanner (System.in);
