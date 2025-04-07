@@ -396,6 +396,13 @@ int lcm = ( div * ded)/ gcd;
  
 System.out.println("GCD of given numbers is : " + gcd);
 System.out.println("Lcm of the given numbers is : "+ lcm);
+
+*********************BENJAMIN BULB PUZZLE********************
+Scanner scn = new Scanner (System.in);
+int n = scn.nextInt();
+for(int i = 1;i*i<=n;i++);{
+System.out.print(i*i);}
+
     
 
   // **************************PRIME FACTORIZATION**************************
